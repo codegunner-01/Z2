@@ -1,1 +1,29 @@
 //Pregunta 3
+{ COPIAR ABAJO EL EJERCICIO DE CADENAS }
+
+function Ejercicio3(cad: String): String;
+var
+  i: Integer;
+  esNum: Boolean;
+begin
+  esNum := True;
+
+  for i := 1 to length(cad) do
+  begin
+    if not(cad[i] in ['0' .. '9']) then
+      esNum := False;
+  end;
+
+  if esNum = True then
+    Result := 'true'
+  else
+    Result := 'false';
+end;
+
+procedure TForm1.ejercicio1Click(Sender: TObject);
+begin
+
+  { COPIAR ABAJO LA LLAMADA DEL EJERCICIO DE CADENAS }
+
+  Edit2.Text := (Ejercicio3(cad));
+end;
