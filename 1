@@ -1,1 +1,38 @@
 //PREGUNTA 1
+
+
+function Ejercicio1(n: Integer): String;
+var
+  pri, ult, dif, aux: Integer;
+  res: String;
+begin
+  aux := n;
+
+
+  ult := aux mod 10;
+
+
+  while aux >= 10 do
+    aux := aux div 10;
+  pri := aux;
+
+  // diferencia
+  dif := Abs(ult - pri);
+
+
+  if dif mod 2 = 0 then
+    res := IntToStr(dif) + '  Es par'
+  else
+    res := IntToStr(dif) + '  Es impar';
+
+  Result := res;
+end;
+
+
+procedure TForm1.ejercicio11Click(Sender: TObject);
+begin
+  { LLAMADA 1 COPIAR ABAJO }
+
+     Edit2.Text := (Ejercicio1(n));
+
+end;
