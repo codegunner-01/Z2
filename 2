@@ -1,1 +1,37 @@
 //PREGUNTA 2
+function Ejercicio2(n: Integer): Integer;
+var
+  i, term, suma: Integer;
+  sw: Boolean;
+begin
+  term := 3;
+  suma := 0;
+  sw := True;
+
+  for i := 1 to n do
+  begin
+    if term mod 2 = 0 then
+      suma := suma + term;
+
+    if sw = True then
+    begin
+      term := term * 3;
+      sw := False;
+    end
+    else
+    begin
+      term := term - 3;
+      sw := True;
+    end;
+  end;
+
+  Result := suma;
+end;
+
+procedure TForm1.ejercicio21Click(Sender: TObject);
+begin
+  { LLAMADA 2  COPIAR ABAJO }
+
+  Edit2.Text := FloatToStr(Ejercicio2(n));
+
+end;
